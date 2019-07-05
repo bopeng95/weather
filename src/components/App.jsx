@@ -1,5 +1,6 @@
 import { hot } from 'react-hot-loader/root';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import Inputs from './Inputs.jsx';
 import Weather from './Weather.jsx';
 import { getCurrentPosition } from '../helpers.js';
 
@@ -7,10 +8,12 @@ const App = () => {
 	const [weather, setWeather] = useState(null);
 	const [status, setStatus] = useState(null);
 	useEffect(() => getCurrentPosition(setWeather, setStatus), []);
+	const weatherChild = useMemo(() => <Weather data={weather}/>, [weather]);
 	return (
 		<main className="container">
 			<h2>Weather App</h2>
-			{!weather ? <div>{status}</div> : <Weather data={weather}/> }
+			<Inputs w={setWeather} s={setStatus}/>
+			{!weather ? <div>{status}</div> : weatherChild}
 		</main>
 	)
 }

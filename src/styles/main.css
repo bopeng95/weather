@@ -14,3 +14,60 @@ h2 {
 	text-align: center; 
 	margin: 10px;
 }
+
+.location > h3 { margin: 5px 0; }
+
+/*INPUTS*/
+.userInputs {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1em;
+	margin: 20px 0;
+}
+
+.userInputs > form { 
+	display: grid; 
+	grid-gap: .5em;
+}
+.userInputs > form:nth-child(1) { 
+	grid-template-columns: 1fr;
+}
+.userInputs > form:nth-child(2) {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas:
+		"lat lon"
+		"btn btn"
+}
+#lat { grid-area: lat; }
+#lon { grid-area: lon; }
+#llbtn { grid-area: btn; }
+
+input:focus { outline: none; }
+input[type="text"],
+input[type="number"] {
+	font-size: 15px;
+	padding: 5px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+input[type="button"] {
+	padding: 5px 0;
+	font-size: 15px;
+	border: .5px solid turquoise;
+	border-radius: 5px;
+	background: white;
+	color: turquoise;
+	cursor: pointer;
+}
+input[type="button"]:hover {
+	color: white;
+	background: turquoise;
+}
+input[type="button"]:active {
+	background: mediumturquoise;
+	border: .5px solid mediumturquoise;
+}
+
+@media(max-width: 750px) {
+	.userInputs { grid-template-columns: 1fr; }
+}
