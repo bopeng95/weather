@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+
+#config file (my appid for open weather)
+config.json
+
+# git fugitive files
+*.swp
+*.swo
