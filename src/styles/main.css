@@ -14,8 +14,7 @@ h2 {
 	text-align: center; 
 	margin: 10px;
 }
-
-.location > h3 { margin: 5px 0; }
+h3 { padding: 10px 0 20px 0; }
 
 /*INPUTS*/
 .userInputs {
@@ -46,26 +45,26 @@ input:focus { outline: none; }
 input[type="text"],
 input[type="number"] {
 	font-size: 15px;
-	padding: 5px;
+	padding: 8px 5px;
 	border: 1px solid lightgray;
 	border-radius: 5px;
 }
 input[type="button"] {
 	padding: 5px 0;
 	font-size: 15px;
-	border: .5px solid turquoise;
+	border: .5px solid gray;
 	border-radius: 5px;
 	background: white;
-	color: turquoise;
+	color: gray;
 	cursor: pointer;
 }
 input[type="button"]:hover {
-	color: white;
-	background: turquoise;
+	border: .5px solid black;
+	color: black;
 }
 input[type="button"]:active {
-	background: mediumturquoise;
-	border: .5px solid mediumturquoise;
+	color: gray;
+	border: .5px solid gray;
 }
 
 @media(max-width: 750px) {

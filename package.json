@@ -16,7 +16,8 @@
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.6",
     "react": "^16.8.6",
-    "react-hot-loader": "^4.12.3"
+    "react-hot-loader": "^4.12.3",
+    "recharts": "^1.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",

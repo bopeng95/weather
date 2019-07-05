@@ -13,13 +13,14 @@ const Inputs = ({ w, s }) => {
 		const longitude = p.children[1].value;
 		fetchLatLon({ latitude, longitude }, w, s);
 	}
+	const prevent = (e) => e.preventDefault();
 	return (
 		<section className="userInputs">
-			<form>
+			<form onSubmit={prevent}>
 				<input type="text" name="location" placeholder="location" required/>
 				<input type="button" value="submit location" onClick={postLocation}/>
 			</form>
-			<form>
+			<form onSubmit={prevent}>
 				<input id="lat" 
 					type="number" 
 					name="lat" 
