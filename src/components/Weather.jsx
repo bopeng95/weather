@@ -14,9 +14,9 @@ const Weather = ({ data }) => {
 	const { main, name } = data;
 	const { temp, humidity, pressure } = main;
 	const d = [
-		{ name: 'temp', value: parseFloat(temp) },
-		{ name: 'humidity', value: parseFloat(humidity) },
-		{ name: 'pressure', value: parseFloat(pressure) },
+		{ name: 'temp', value: temp },
+		{ name: 'humidity', value: humidity },
+		{ name: 'pressure', value: pressure },
 	]
 	const colors = ['#FF7F50', '#00CED1', '#DB7093'];
 	return (
