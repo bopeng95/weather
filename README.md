@@ -4,7 +4,7 @@
 - `npm run dev` to start hosting on port 8080
 
 ### About config.json file    
-Inside the `src` folder, there is a `config.json` containing the `appid` for the application
+Inside the `src` folder, there is a `config.json` containing the `appid` for the application     
 It looks like this (removed by gitignore)
 ```
 {
