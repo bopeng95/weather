@@ -30,6 +30,7 @@ module.exports = (env) => {
 		resolve: { alias: { 'react-dom': '@hot-loader/react-dom' } },
         devServer: {
             contentBase: path.join(__dirname),
+			watchContentBase: true,
             publicPath: '/build',
             hot: true,
             historyApiFallback: true,
